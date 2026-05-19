@@ -12,6 +12,7 @@ module.exports = async (env, argv) => {
     output: {
       filename: "[name].[contenthash].js",
       path: path.resolve(__dirname, "dist"),
+      publicPath: dev ? "/" : "/protonspin/",
       clean: true,
     },
     resolve: { extensions: [".ts", ".tsx", ".js"] },

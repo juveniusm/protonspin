@@ -9,17 +9,17 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Proton Spin" />
   <Description DefaultValue="Interactive MRI proton spin visualization showing B0 field alignment, parallel/anti-parallel populations, and SNR." />
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-128.png" />
-  <SupportUrl DefaultValue="https://localhost:3000" />
+  <IconUrl DefaultValue="https://juveniusm.github.io/protonspin/assets/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://juveniusm.github.io/protonspin/assets/icon-128.png" />
+  <SupportUrl DefaultValue="https://github.com/juveniusm/protonspin" />
   <AppDomains>
-    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://juveniusm.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Presentation" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:3000/index.html" />
+    <SourceLocation DefaultValue="https://juveniusm.github.io/protonspin/index.html" />
     <RequestedHeight>600</RequestedHeight>
     <RequestedWidth>800</RequestedWidth>
   </DefaultSettings>
