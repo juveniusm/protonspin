@@ -9,6 +9,19 @@ export const App: React.FC = () => {
   const [b0, setB0] = useState(0);
 
   const protons = useMemo(() => {
+    // Place protons on a jittered grid so arrows never overlap
+    const COLS = 12;
+    const ROWS = 7;
+    const cells: Array<[number, number]> = [];
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) cells.push([c, r]);
+    }
+    for (let i = cells.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cells[i], cells[j]] = [cells[j], cells[i]];
+    }
+    const chosen = cells.slice(0, PROTON_COUNT);
+
     // Evenly spaced ranks ensure exactly 40/40 at B0=0 and a deterministic split as B0 rises
     const ranks = Array.from(
       { length: PROTON_COUNT },
@@ -18,12 +31,18 @@ export const App: React.FC = () => {
       const j = Math.floor(Math.random() * (i + 1));
       [ranks[i], ranks[j]] = [ranks[j], ranks[i]];
     }
-    return ranks.map((seed) => ({
-      x: Math.random(),
-      y: Math.random(),
-      randomAngle: Math.random() * Math.PI * 2,
-      seed,
-    }));
+
+    return ranks.map((seed, i) => {
+      const [c, r] = chosen[i];
+      const jitterX = (Math.random() - 0.5) * 0.35;
+      const jitterY = (Math.random() - 0.5) * 0.35;
+      return {
+        x: (c + 0.5 + jitterX) / COLS,
+        y: (r + 0.5 + jitterY) / ROWS,
+        randomAngle: Math.random() * Math.PI * 2,
+        seed,
+      };
+    });
   }, []);
 
   const ALIGN_FULL_B0 = 1.5;
