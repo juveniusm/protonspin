@@ -7,8 +7,8 @@ export interface Proton {
   seed: number;
 }
 
-const RED = { r: 248, g: 168, b: 168 };
-const BLUE = { r: 168, g: 196, b: 248 };
+const RED = { r: 217, g: 117, b: 100 };
+const BLUE = { r: 58, g: 135, b: 148 };
 
 function colorForAngle(angle: number): string {
   // -sin(angle) is +1 when pointing up (-π/2), -1 when pointing down (+π/2)
