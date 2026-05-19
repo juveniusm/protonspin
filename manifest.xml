@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xsi:type="ContentApp">
+  <Id>3315bbc1-48d3-4032-a8cb-fc8e1e106316</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Proton Spin Lab</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Proton Spin" />
+  <Description DefaultValue="Interactive MRI proton spin visualization showing B0 field alignment, parallel/anti-parallel populations, and SNR." />
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-128.png" />
+  <SupportUrl DefaultValue="https://localhost:3000" />
+  <AppDomains>
+    <AppDomain>https://localhost:3000</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Presentation" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/index.html" />
+    <RequestedHeight>600</RequestedHeight>
+    <RequestedWidth>800</RequestedWidth>
+  </DefaultSettings>
+  <Permissions>Restricted</Permissions>
+</OfficeApp>
