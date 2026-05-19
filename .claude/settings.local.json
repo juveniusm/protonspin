@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes yo office --help)",
+      "Bash(yo office *)",
+      "PowerShell($env:Path = \"$env:APPDATA\\\\npm;$env:Path\"; yo office --help 2>&1 | Select-Object -Last 40)",
+      "PowerShell([guid]::NewGuid\\(\\).ToString\\(\\))",
+      "PowerShell(npm install 2>&1)",
+      "Bash(curl -sk https://localhost:3000/ -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl -sk https://localhost:3000/app.app.js -o /dev/null -w \"%{http_code}\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s http://localhost:3000/ -o /dev/null -w \"%{http_code}\")"
+    ]
+  }
+}
