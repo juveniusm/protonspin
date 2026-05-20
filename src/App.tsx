@@ -60,17 +60,6 @@ export const App: React.FC = () => {
       <header className="header">
         <div className="title-block">
           <h1>MRI Physics: B0 Field Effects</h1>
-          <p className="subtitle">
-            {b0 === 0
-              ? "Increase B0 to align protons and generate a signal."
-              : rotationAlignment < 1
-              ? "Protons rotate to align with the field axis."
-              : fieldExcess < 0.3
-              ? "Fully aligned — populations split evenly between parallel and anti-parallel."
-              : fieldExcess < 0.7
-              ? "Field strength tips the balance — more spins flip to parallel."
-              : "Strong field, large parallel excess, high SNR."}
-          </p>
         </div>
         <div className="stats">
           <Stat label="Field B0" value={`${b0.toFixed(1)} T`} />
