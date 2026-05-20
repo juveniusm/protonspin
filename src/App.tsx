@@ -51,8 +51,6 @@ export const App: React.FC = () => {
   const upProbability = 0.5 + 0.35 * fieldExcess;
   const upCount = protons.filter((p) => p.seed < upProbability).length;
   const downCount = PROTON_COUNT - upCount;
-  const netExcess = upCount - downCount;
-  const m0 = Math.abs(netExcess);
   const snr = b0 / 1.5;
 
   return (
@@ -79,9 +77,6 @@ export const App: React.FC = () => {
           <span className="voxel-label">VOXEL OF TISSUE</span>
         </div>
         <aside className="sidebar">
-          <div className="m0-readout">
-            {m0 < 0.5 ? "M0 = 0 (Net Zero)" : `M0 ≈ ${m0.toFixed(0)} ↑`}
-          </div>
           <SnrMeter b0={b0} />
         </aside>
       </main>
